@@ -1,0 +1,12 @@
+body{
+    background-color: #011627;
+    color: #fdfffc;
+    font-family: 'Silkscreen', cursive;
+    font-size: 25px;
+    line-height: 17px;
+    
+}
+
+canvas {
+    display: block;
+}
