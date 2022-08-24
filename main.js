@@ -1,5 +1,5 @@
 console.log("0w0");
-const biteCharecter = "9876543210";
+const biteCharecter = "@#W$975310!abc;:+=-,._ ";
 const biteLen = biteCharecter.length;
 
 let mainImg;
@@ -31,14 +31,15 @@ function draw() {
 
       noStroke();
       let c = color(r, g, b);
-      fill(255);
+      fill(average);
       // square(i * w, j * h, w * 0.4);
       const charindex = floor(
-        map(average, 70, 255, 0, biteLen)
+        map(average+30, 0, 255, biteLen, 0)
         );
       
       textSize(w);
       textAlign(CENTER, CENTER);
+      // text("Retr0", i * w + w * 0.5, j * h + h * 0.5);
       text(biteCharecter.charAt(charindex), i * w + w * 0.5, j * h + h * 0.5);
 
 
