@@ -1,11 +1,13 @@
 body{
-    background-color: #ff0069;
-    color: #f4f800;
+    background-color: #0d1821;
+    color: #4dff00;
     font-family: 'Silkscreen', cursive;
     font-size: 4.0px;
     line-height: 2.9px;
     letter-spacing: 1.0px;
-    
+    margin: 0;
+    padding: 0;
+    text-align: justify;
 }
 
 canvas {

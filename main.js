@@ -1,6 +1,6 @@
 console.log("0w0");
-const biteCharecter = "@#W$975310!abc;:+=-,._  ";
-// const biteCharecter = "01";
+// const biteCharecter = "@#W$975310!abc;:+=-,._ ";
+const biteCharecter = "@#W$97530+=_";
 const biteLen = biteCharecter.length;
 
 // for images:
@@ -18,7 +18,7 @@ let mainDiv ;
 function setup() {
   noCanvas();
   videoSource = createCapture(VIDEO);
-  videoSource.size(490, 270);
+  videoSource.size(80, 50);
   mainDiv = createDiv();
 }
 
@@ -50,8 +50,9 @@ function draw() {
 
 
       const charindex = floor(
-        map(average, 0, 220, biteLen, 0)
+        map(average, 0, 225, biteLen, 0)
         );
+
 
     // before dom in p5:
       // textSize(w);
@@ -61,10 +62,12 @@ function draw() {
     // End:before dom in p5
 
     const eachCharecter = biteCharecter.charAt(charindex);
-    if (eachCharecter == " ") {eachFrame += "&nbsp"};
-    eachFrame += eachCharecter;
+    if (eachCharecter == " ") {eachFrame += "&nbsp"}
+    else {eachFrame += eachCharecter}
   }
   eachFrame += "<br/>"
+
   }
   mainDiv.html(eachFrame);
+
 }
