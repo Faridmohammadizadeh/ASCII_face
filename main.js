@@ -15,9 +15,9 @@ function draw() {
   background(10);
   // image(mainImg, 0, 0, width, height);
 
-  let w = (width / mainImg.width);
-  let h = (height / mainImg.height);
-  
+  let w = width / mainImg.width;
+  let h = height / mainImg.height;
+
   mainImg.loadPixels();
 
   for (let i = 0; i < mainImg.width; i++) {
@@ -33,17 +33,12 @@ function draw() {
       let c = color(r, g, b);
       fill(average);
       // square(i * w, j * h, w * 0.4);
-      const charindex = floor(
-        map(average+30, 0, 255, biteLen, 0)
-        );
-      
+      const charindex = floor(map(average + 30, 0, 255, biteLen, 0));
+
       textSize(w);
       textAlign(CENTER, CENTER);
       // text("Retr0", i * w + w * 0.5, j * h + h * 0.5);
       text(biteCharecter.charAt(charindex), i * w + w * 0.5, j * h + h * 0.5);
-
-
-
     }
   }
 }
